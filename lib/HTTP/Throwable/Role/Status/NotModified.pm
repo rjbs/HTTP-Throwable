@@ -42,25 +42,20 @@ first empty line after the header fields.
 
 The response MUST include the following header fields:
 
-=over 4
+=begin :list
 
-=item Date, unless its omission is required by section 14.18.1
-
-=back
+= Date, unless its omission is required by section 14.18.1
 
 If a clockless origin server obeys these rules, and proxies and
 clients add their own Date to any response received without one
 (as already specified by [RFC 2068], section 14.19), caches will
 operate correctly.
 
-=over 4
+= ETag and/or Content-Location, if the header would have been sent in a 200 response to the same request
 
-=item ETag and/or Content-Location, if the header would have been
-      sent in a 200 response to the same request
+= Expires, Cache-Control, and/or Vary, if the field-value might differ from that sent in any previous response for the same variant
 
-=item Expires, Cache-Control, and/or Vary, if the field-value might
-      differ from that sent in any previous response for the same
-      variant
+=end :list
 
 If the conditional GET used a strong cache validator, the response
 SHOULD NOT include other entity-headers. Otherwise (i.e., the conditional
