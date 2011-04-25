@@ -28,7 +28,6 @@ sub new_exception {
 sub core_roles {
     return qw(
         HTTP::Throwable
-        MooseX::StrictConstructor::Role::Object
     );
 }
 
@@ -76,6 +75,9 @@ sub class_for {
         ],
         cache        => 1,
     );
+
+    require MooseX::StrictConstructor;
+    MooseX::StrictConstructor->import({ into => $class->name });
 
     return $class->name;
 }

@@ -1,5 +1,8 @@
 Revision history for Perl extension HTTP::Throwable
 
+{{$NEXT}}
+    - MooseX::StrictConstructor has changed API; track it
+
 0.011
     - fix Dist::Zilla configuration so that we get per-package $VERSION vars
 
