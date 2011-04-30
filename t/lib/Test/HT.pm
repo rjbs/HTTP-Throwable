@@ -106,7 +106,9 @@ sub ht_test {
                     # XXX: Another gross conditional -- rjbs, 2011-02-21
                     $body = undef if $factory_class eq 'MyFactory';
 
-                    my $length = $extra->{length} // length $body // 0;
+                    my $length = defined $extra->{length} ? $extra->{length}
+                               : defined length $body     ? length $body
+                               :                            0;
 
                     my $psgi = $err->as_psgi;
 

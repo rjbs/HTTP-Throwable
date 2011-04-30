@@ -1,6 +1,7 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+    - remove the use of // from a test, restoring perl 5.8 compatibility
 
 0.013     2011-04-25 10:52:47 America/New_York
     - MooseX::StrictConstructor has changed API; track it
