@@ -2,6 +2,9 @@ Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
 
+0.015     2011-06-16 12:03:01 America/New_York
+    - require Moose 1.23 to avoid bugs both various and sundry
+
 0.014     2011-04-30 07:41:49 America/New_York
     - remove the use of // from a test, restoring perl 5.8 compatibility
 
