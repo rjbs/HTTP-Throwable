@@ -1,6 +1,8 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+
+0.016     2011-06-17 20:39:10 America/New_York
     - fix a test regex to work with DOS-style paths
 
 0.015     2011-06-16 12:03:01 America/New_York
