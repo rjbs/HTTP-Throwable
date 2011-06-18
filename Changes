@@ -1,6 +1,7 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+    - fix a test regex to work with DOS-style paths
 
 0.015     2011-06-16 12:03:01 America/New_York
     - require Moose 1.23 to avoid bugs both various and sundry

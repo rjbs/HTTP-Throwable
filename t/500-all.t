@@ -13,7 +13,7 @@ ht_test(InternalServerError => {}, {
     code   => 500,
     reason => 'Internal Server Error',
     length => ignore(),
-    body   => re(qr{500 Internal Server Error.+at t/lib/Test/HT.pm}s),
+    body   => re(qr{500 Internal Server Error.+at t.lib.Test.HT.pm}s),
 });
 
 ht_test(NotImplemented => {}, {
