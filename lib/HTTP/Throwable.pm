@@ -374,6 +374,6 @@ L<HTTP::Throwable::Role::TextBody> and L<HTTP::Throwable::Role::NoBody>.
 
 =head1 SEE ALSO
 
-L<http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>
-
-L<Plack::Middleware::HTTPExceptions>
+=for :list
+* L<http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>
+* L<Plack::Middleware::HTTPExceptions>
