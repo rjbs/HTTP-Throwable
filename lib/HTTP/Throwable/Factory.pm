@@ -8,7 +8,7 @@ use Sub::Exporter -setup => {
     http_exception => Sub::Exporter::Util::curry_method('new_exception'),
   ],
 };
-use Module::Runtime qw(use_module);
+use Module::Runtime;
 
 sub throw {
     my $factory = shift;
@@ -65,7 +65,7 @@ sub class_for {
         @roles = $self->roles_for_no_ident;
     }
 
-    use_module($_) for @roles;
+    Module::Runtime::use_module($_) for @roles;
 
     my $class = Moose::Meta::Class->create_anon_class(
         superclasses => [ $self->base_class ],
