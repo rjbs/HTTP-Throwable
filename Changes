@@ -1,62 +1,63 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
-    - removed use of deprecated Class::MOP::load_class
+        - removed use of deprecated Class::MOP::load_class
 
 0.016     2011-06-17 20:39:10 America/New_York
-    - fix a test regex to work with DOS-style paths
+        - fix a test regex to work with DOS-style paths
 
 0.015     2011-06-16 12:03:01 America/New_York
-    - require Moose 1.23 to avoid bugs both various and sundry
+        - require Moose 1.23 to avoid bugs both various and sundry
 
 0.014     2011-04-30 07:41:49 America/New_York
-    - remove the use of // from a test, restoring perl 5.8 compatibility
+        - remove the use of // from a test, restoring perl 5.8 compatibility
 
 0.013     2011-04-25 10:52:47 America/New_York
-    - MooseX::StrictConstructor has changed API; track it
+        - MooseX::StrictConstructor has changed API; track it
 
 0.011
-    - fix Dist::Zilla configuration so that we get per-package $VERSION vars
+        - fix Dist::Zilla configuration so that we get per-package $VERSION
+          vars
 
 0.010
-    - NOT BACKWARD COMPATIBLE
-    - significantly rewritten by rjbs, in terms of roles rather than subclasses
-        - re-read the documentation!
-    - HTTP::Throwable::Factory is now the piece intended most for end users
-    - should be significantly easier to both use and extend
+         [NOT BACKWARD COMPATIBLE]
+        - significantly rewritten by rjbs, in terms of roles rather than
+          subclasses - re-read the documentation!
+        - HTTP::Throwable::Factory is now the piece intended most for end users
+        - should be significantly easier to both use and extend
 
 0.005 Sat. Feb. 12, 2011
-    - add proper support for RFC 2324 (thanks rjbs)
-    - allowing more than one Proxy-Authenticate header
-      (thanks to chansen for pointing this out, though he
-      could have mentioned it before I released 0.004 :P)
+        - add proper support for RFC 2324 (thanks rjbs)
+        - allowing more than one Proxy-Authenticate header
+          (thanks to chansen for pointing this out, though he
+          could have mentioned it before I released 0.004 :P)
 
 0.004 Sat. Feb. 12, 2011
-    - allowing more than one WWW-Authenticate header
-      (thanks to chansen for pointing this out)
+        - allowing more than one WWW-Authenticate header
+          (thanks to chansen for pointing this out)
 
 0.003 Fri. Feb. 11, 2011
-    - introspection for status code via is_redirect, is_client_error and
-      is_server_error (Brian Cassidy)
+        - introspection for status code via is_redirect, is_client_error and
+          is_server_error (Brian Cassidy)
 
 0.002 Tues. Feb. 8, 2011
-    - normalize *_location attributes to all be
-      called location, since that is the name of the
-      header
-    - any time we allow additional headers to be
-      passed in, the attribute is now called
-      additional_headers instead of whatever it was
-      before (usually cache_headers)
-    - change the valid_methods attribute in
-      HTTP::Throwable::MethodNotAllowed to be just
-      allow (which is what the header is)
-        - improved the type check on this as well
-    - make the exceptions also function as PSGI apps
-        - add to_app method
-        - support &{} overload
-        - added tests for this
-    - overload stringification
-        - added tests for this
+        - normalize *_location attributes to all be
+          called location, since that is the name of the
+          header
+        - any time we allow additional headers to be
+          passed in, the attribute is now called
+          additional_headers instead of whatever it was
+          before (usually cache_headers)
+        - change the valid_methods attribute in
+          HTTP::Throwable::MethodNotAllowed to be just
+          allow (which is what the header is)
+            - improved the type check on this as well
+        - make the exceptions also function as PSGI apps
+            - add to_app method
+            - support &{} overload
+            - added tests for this
+        - overload stringification
+            - added tests for this
 
 0.001 Tues. Feb. 8, 2011
-    - first release
+        - first release
