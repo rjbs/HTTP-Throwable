@@ -9,11 +9,11 @@ with(
     'HTTP::Throwable::Role::BoringText',
 );
 
-enum 'HTTP::Throwable::Type::Method' => qw[
+enum 'HTTP::Throwable::Type::Method' => [ qw[
     OPTIONS GET HEAD
     POST PUT DELETE
     TRACE CONNECT
-];
+] ];
 
 # TODO: Consider adding a coersion to upper-case lower-cased strings and to
 # uniq the given input.  -- rjbs, 2011-02-21
