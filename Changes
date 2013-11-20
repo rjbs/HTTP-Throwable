@@ -1,6 +1,7 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+        - removed use of deprecated enum syntax
 
 0.017     2013-09-17 09:04:45 Asia/Tokyo
         - removed use of deprecated Class::MOP::load_class
