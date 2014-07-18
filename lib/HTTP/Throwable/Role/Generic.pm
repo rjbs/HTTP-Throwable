@@ -2,6 +2,8 @@ package HTTP::Throwable::Role::Generic;
 
 use Moose::Role;
 
+use Carp qw(confess);
+
 with 'HTTP::Throwable';
 
 sub default_status_code {
