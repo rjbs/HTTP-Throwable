@@ -61,7 +61,7 @@ like(
             allow => [ 'GET', 'PUT', 'OPTIONS', 'PUT' ],
         });
     },
-    qr/Attribute \(allow\) does not pass the type constraint/,
+    qr/did not pass type constraint.+\{"allow"\}/,
     '... type check works (must be unique list)',
 );
 
@@ -71,7 +71,7 @@ like(
             allow => [ 'GET', 'PUT', 'OPTIONS', 'TEST' ],
         });
     },
-    qr/Attribute \(allow\) does not pass the type constraint/,
+    qr/did not pass type constraint.+\{"allow"\}/,
     '... type check works (must be all known methods)',
 );
 

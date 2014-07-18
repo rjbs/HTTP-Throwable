@@ -1,5 +1,5 @@
 package HTTP::Throwable::Role::Status::MovedPermanently;
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +10,7 @@ with(
 sub default_status_code { 301 }
 sub default_reason      { 'Moved Permanently' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

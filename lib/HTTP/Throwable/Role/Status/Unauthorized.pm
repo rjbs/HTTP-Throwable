@@ -1,6 +1,7 @@
 package HTTP::Throwable::Role::Status::Unauthorized;
-use Moose::Role;
 use Types::Standard qw(Str ArrayRef);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -30,7 +31,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose::Role; 1;
+1;
 
 __END__
 

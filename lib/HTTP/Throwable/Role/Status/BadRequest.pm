@@ -1,5 +1,5 @@
 package HTTP::Throwable::Role::Status::BadRequest;
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +10,7 @@ sub default_status_code { 400 }
 
 sub default_reason { 'Bad Request' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

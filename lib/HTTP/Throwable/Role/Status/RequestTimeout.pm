@@ -1,5 +1,5 @@
 package HTTP::Throwable::Role::Status::RequestTimeout;
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -9,7 +9,7 @@ with(
 sub default_status_code { 408 }
 sub default_reason      { 'Request Timeout' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

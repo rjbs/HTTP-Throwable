@@ -1,5 +1,4 @@
 package HTTP::Throwable::Factory;
-use Moose;
 
 use HTTP::Throwable::Variant;
 
@@ -11,6 +10,9 @@ use Sub::Exporter -setup => {
   ],
 };
 use Module::Runtime;
+
+use Moo;
+
 
 sub throw {
     my $factory = shift;
@@ -55,7 +57,7 @@ sub roles_for_no_ident {
     );
 }
 
-sub base_class { 'Moose::Object' }
+sub base_class { 'Moo::Object' }
 
 sub class_for {
     my ($self, $ident) = @_;
@@ -175,7 +177,7 @@ L<HTTP::Throwable::Role::BoringText>.
 =head2 base_class
 
 This is the base class that will be subclassed and into which all the roles
-will be composed.  By default, it is L<Moose::Object>, the universal base Moose
+will be composed.  By default, it is L<Moo::Object>, the universal base Moo
 class.
 
 =head2 core_roles

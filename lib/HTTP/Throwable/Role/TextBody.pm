@@ -1,5 +1,5 @@
 package HTTP::Throwable::Role::TextBody;
-use Moose::Role;
+use Moo::Role;
 
 sub body { $_[0]->text_body }
 
@@ -16,7 +16,6 @@ sub as_string { $_[0]->body }
 
 requires 'text_body';
 
-no Moose::Role;
 1;
 
 __END__

@@ -1,5 +1,5 @@
 package HTTP::Throwable::Role::Status::TemporaryRedirect;
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +10,7 @@ with(
 sub default_status_code { 307 }
 sub default_reason      { 'Temporary Redirect' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

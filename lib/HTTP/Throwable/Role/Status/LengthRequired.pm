@@ -1,5 +1,5 @@
 package HTTP::Throwable::Role::Status::LengthRequired;
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -9,7 +9,7 @@ with(
 sub default_status_code { 411 }
 sub default_reason      { 'Length Required' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

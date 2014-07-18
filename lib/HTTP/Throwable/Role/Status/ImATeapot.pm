@@ -1,6 +1,7 @@
 package HTTP::Throwable::Role::Status::ImATeapot;
-use Moose::Role;
 use Types::Standard qw(Bool);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -39,7 +40,7 @@ sub text_body {
     return $base;
 }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

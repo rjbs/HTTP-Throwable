@@ -1,5 +1,5 @@
 package HTTP::Throwable::Role::Status::HTTPVersionNotSupported;
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -9,7 +9,7 @@ with(
 sub default_status_code { 505 }
 sub default_reason      { 'HTTP Version Not Supported' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

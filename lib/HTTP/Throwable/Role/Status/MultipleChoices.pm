@@ -1,7 +1,8 @@
 package HTTP::Throwable::Role::Status::MultipleChoices;
-use Moose::Role;
 
 use Types::Standard qw(Str);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -23,7 +24,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose; 1;
+1;
 
 __END__
 
