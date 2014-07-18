@@ -58,7 +58,7 @@ sub roles_for_no_ident {
     );
 }
 
-sub base_class { 'Moo::Object' }
+sub base_class { () }
 
 sub class_for {
     my ($self, $ident) = @_;

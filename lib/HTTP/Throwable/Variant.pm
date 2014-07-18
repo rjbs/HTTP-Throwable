@@ -9,7 +9,8 @@ use Package::Variant
 
 sub make_variant {
     my ($class, $target_package, %arguments) = @_;
-    extends @{ $arguments{superclasses} };
+    extends @{ $arguments{superclasses} }
+        if  @{ $arguments{superclasses} };
     with @{ $arguments{roles} };
 }
 
