@@ -17,11 +17,15 @@ To install this module type the following:
 
 This module requires these other modules and libraries:
 
-    Moose
-    MooseX::StrictConstructor
+    Moo
+    MooX::StrictConstructor
     Throwable
     Plack
     List::AllUtils
+    Types::Standard
+    Type::Tiny
+    Package::Variant
+    namespace::clean
 
 ## Copyright and License
 
