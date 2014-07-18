@@ -2,9 +2,11 @@ package HTTP::Throwable::Role::Redirect;
 
 use Moose::Role;
 
+use Types::Standard qw(Str);
+
 has 'location' => (
     is       => 'ro',
-    isa      => 'Str',
+    isa      => Str,
     required => 1,
 );
 

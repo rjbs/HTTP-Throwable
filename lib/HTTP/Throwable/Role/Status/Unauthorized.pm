@@ -1,6 +1,7 @@
 package HTTP::Throwable::Role::Status::Unauthorized;
 
 use Moose::Role;
+use Types::Standard qw(Str ArrayRef);
 
 with(
     'HTTP::Throwable',
@@ -12,7 +13,7 @@ sub default_reason      { 'Unauthorized' }
 
 has 'www_authenticate' => (
     is       => 'ro',
-    isa      => 'Str | ArrayRef[ Str ]',
+    isa      => Str | ArrayRef[Str],
     required => 1,
 );
 

@@ -1,7 +1,9 @@
 package HTTP::Throwable::Role::Status::MethodNotAllowed;
 
 use Moose::Role;
-use Moose::Util::TypeConstraints;
+
+use Type::Utils qw(subtype as where enum);
+use Types::Standard qw(ArrayRef);
 
 use List::AllUtils qw[ uniq ];
 
@@ -10,7 +12,7 @@ with(
     'HTTP::Throwable::Role::BoringText',
 );
 
-enum 'HTTP::Throwable::Type::Method' => [ qw[
+my $method_enum_type = enum "HttpThrowableTypeMethod" => [ qw[
     OPTIONS GET HEAD
     POST PUT DELETE
     TRACE CONNECT
@@ -18,16 +20,16 @@ enum 'HTTP::Throwable::Type::Method' => [ qw[
 
 # TODO: Consider adding a coersion to upper-case lower-cased strings and to
 # uniq the given input.  -- rjbs, 2011-02-21
-subtype 'HTTP::Throwable::Type::MethodList'
-    => as 'ArrayRef'
-    => where { (scalar uniq @{$_}) == (scalar @{$_}) };
+my $method_list_type = subtype "HttpThrowableTypeMethodList",
+    as ArrayRef[ $method_enum_type ],
+    where { (scalar uniq @{$_}) == (scalar @{$_}) };
 
 sub default_status_code { 405 }
 sub default_reason      { 'Method Not Allowed' }
 
 has 'allow' => (
     is       => 'ro',
-    isa      => 'HTTP::Throwable::Type::MethodList[ HTTP::Throwable::Type::Method ]',
+    isa      => $method_list_type,
     required => 1
 );
 
@@ -39,7 +41,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose::Role; no Moose::Util::TypeConstraints; 1;
+no Moose::Role; 1;
 
 __END__
 

@@ -2,6 +2,8 @@ package HTTP::Throwable::Role::Status::InternalServerError;
 
 use Moose::Role;
 
+use Types::Standard qw(Bool);
+
 with(
     'HTTP::Throwable',
     'StackTrace::Auto',
@@ -10,7 +12,7 @@ with(
 sub default_status_code { 500 }
 sub default_reason      { 'Internal Server Error' }
 
-has 'show_stack_trace' => ( is => 'ro', isa => 'Bool', default => 1 );
+has 'show_stack_trace' => ( is => 'ro', isa => Bool, default => 1 );
 
 sub text_body {
     my ($self) = @_;
