@@ -12,6 +12,7 @@ use Sub::Exporter -setup => {
 use Module::Runtime;
 
 use Moo;
+use namespace::clean;
 
 
 sub throw {
