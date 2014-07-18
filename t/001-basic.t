@@ -4,7 +4,6 @@ use warnings;
 
 use Test::More;
 use Test::Fatal;
-use Test::Moose;
 use t::lib::Test::HT;
 
 ht_test(
