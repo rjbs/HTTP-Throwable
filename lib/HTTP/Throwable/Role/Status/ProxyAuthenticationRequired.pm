@@ -1,5 +1,8 @@
 package HTTP::Throwable::Role::Status::ProxyAuthenticationRequired;
-use Moose::Role;
+
+use Types::Standard qw(Str ArrayRef);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -11,7 +14,7 @@ sub default_reason      { 'Proxy Authentication Required' }
 
 has 'proxy_authenticate' => (
     is       => 'ro',
-    isa      => 'Str | ArrayRef[ Str ]',
+    isa      => Str | ArrayRef[ Str ],
     required => 1,
 );
 
@@ -29,7 +32,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose::Role; 1;
+1;
 
 __END__
 

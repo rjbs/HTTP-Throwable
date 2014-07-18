@@ -1,5 +1,6 @@
 package HTTP::Throwable::Role::Status::BadGateway;
-use Moose::Role;
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -9,7 +10,7 @@ with(
 sub default_status_code { 502 }
 sub default_reason      { 'Bad Gateway' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

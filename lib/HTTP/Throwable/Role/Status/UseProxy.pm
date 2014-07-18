@@ -1,5 +1,6 @@
 package HTTP::Throwable::Role::Status::UseProxy;
-use Moose::Role;
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +11,7 @@ with(
 sub default_status_code { 305 }
 sub default_reason      { 'Use Proxy' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

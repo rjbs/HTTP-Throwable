@@ -1,12 +1,15 @@
 package HTTP::Throwable::Role::Status::ImATeapot;
-use Moose::Role;
+
+use Types::Standard qw(Bool);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
 );
 
-has 'short' => (is => 'ro', isa => 'Bool', default => 0);
-has 'stout' => (is => 'ro', isa => 'Bool', default => 0);
+has 'short' => (is => 'ro', isa => Bool, default => 0);
+has 'stout' => (is => 'ro', isa => Bool, default => 0);
 
 sub default_status_code { 418 }
 sub default_reason      { q{I'm a teapot} }
@@ -38,7 +41,7 @@ sub text_body {
     return $base;
 }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

@@ -1,5 +1,8 @@
 package HTTP::Throwable::Role::Status::MultipleChoices;
-use Moose::Role;
+
+use Types::Standard qw(Str);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -9,7 +12,7 @@ with(
 sub default_status_code { 300 }
 sub default_reason      { 'Multiple Choices' }
 
-has 'location' => ( is => 'ro', isa => 'Str' );
+has 'location' => ( is => 'ro', isa => Str );
 
 around 'build_headers' => sub {
     my $next    = shift;
@@ -21,7 +24,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose; 1;
+1;
 
 __END__
 

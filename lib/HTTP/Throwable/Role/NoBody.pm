@@ -1,5 +1,6 @@
 package HTTP::Throwable::Role::NoBody;
-use Moose::Role;
+
+use Moo::Role;
 
 sub body { return }
 
@@ -13,7 +14,6 @@ sub body_headers {
 
 sub as_string { $_[0]->status_line }
 
-no Moose::Role;
 1;
 
 __END__

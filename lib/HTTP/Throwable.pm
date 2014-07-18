@@ -1,7 +1,8 @@
 package HTTP::Throwable;
-use Moose::Role;
-use MooseX::StrictConstructor;
-use MooseX::Role::WithOverloading 0.09;
+
+use Types::Standard qw(Int Str ArrayRef);
+
+use Moo::Role;
 
 use overload
     '&{}' => 'to_app',
@@ -14,25 +15,25 @@ with 'Throwable';
 
 has 'status_code' => (
     is       => 'ro',
-    isa      => 'Int',
+    isa      => Int,
     builder  => 'default_status_code',
 );
 
 has 'reason' => (
     is       => 'ro',
-    isa      => 'Str',
+    isa      => Str,
     required => 1,
     builder  => 'default_reason',
 );
 
 has 'message' => (
     is  => 'ro',
-    isa => 'Str',
+    isa => Str,
     predicate => 'has_message',
 );
 
 # TODO: type this attribute more strongly -- rjbs, 2011-02-21
-has 'additional_headers' => ( is => 'ro', isa => 'ArrayRef' );
+has 'additional_headers' => ( is => 'ro', isa => ArrayRef );
 
 sub build_headers {
     my ($self, $body) = @_;
@@ -87,7 +88,7 @@ sub is_server_error {
     return $status >= 500 && $status < 600;
 }
 
-no Moose::Role; 1;
+1;
 
 __END__
 
