@@ -1,6 +1,6 @@
 package HTTP::Throwable::Role::Status::Found;
 
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -11,7 +11,7 @@ with(
 sub default_status_code { 302 }
 sub default_reason      { 'Found' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

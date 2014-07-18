@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Package::Variant
-  importing => ['Moose', 'MooseX::StrictConstructor'],
+  importing => ['Moo', 'MooX::StrictConstructor'],
   subs      => [ qw(extends with) ];
 
 sub make_variant {

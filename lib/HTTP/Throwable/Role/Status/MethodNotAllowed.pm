@@ -1,11 +1,10 @@
 package HTTP::Throwable::Role::Status::MethodNotAllowed;
 
-use Moose::Role;
-
 use Type::Utils qw(subtype as where enum);
 use Types::Standard qw(ArrayRef);
-
 use List::AllUtils qw[ uniq ];
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -41,8 +40,8 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose::Role; 1;
 
+1;
 __END__
 
 # ABSTRACT: 405 Method Not Allowed

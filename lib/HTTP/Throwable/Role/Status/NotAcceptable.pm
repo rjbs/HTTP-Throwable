@@ -1,6 +1,6 @@
 package HTTP::Throwable::Role::Status::NotAcceptable;
 
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +10,7 @@ with(
 sub default_status_code { 406 }
 sub default_reason      { 'Not Acceptable' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

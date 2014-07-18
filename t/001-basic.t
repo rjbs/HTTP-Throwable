@@ -48,7 +48,7 @@ subtest "strict constructors all around" => sub {
 
   like(
     $error,
-    qr{unknown attribute\(s\) init_arg passed to the constructor},
+    qr{Found unknown attribute\(s\) passed to the constructor},
     "http throwables have strict constructors",
   );
 };

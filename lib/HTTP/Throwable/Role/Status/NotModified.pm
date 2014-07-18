@@ -1,6 +1,6 @@
 package HTTP::Throwable::Role::Status::NotModified;
 
-use Moose::Role;
+use Moo::Role;
 
 use Plack::Util ();
 
@@ -26,7 +26,7 @@ around 'as_psgi' => sub {
     $psgi;
 };
 
-no Moose::Role; 1;
+1;
 
 __END__
 

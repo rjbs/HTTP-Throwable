@@ -1,8 +1,8 @@
 package HTTP::Throwable::Role::Status::ServiceUnavailable;
 
-use Moose::Role;
-
 use Types::Standard qw(Str);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -24,7 +24,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose::Role; 1;
+1;
 
 __END__
 

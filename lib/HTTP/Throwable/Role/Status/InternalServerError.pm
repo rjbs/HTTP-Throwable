@@ -1,8 +1,8 @@
 package HTTP::Throwable::Role::Status::InternalServerError;
 
-use Moose::Role;
-
 use Types::Standard qw(Bool);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -24,7 +24,7 @@ sub text_body {
     return $out;
 }
 
-no Moose; 1;
+1;
 
 __END__
 

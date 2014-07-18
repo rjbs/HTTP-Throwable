@@ -1,10 +1,8 @@
 package HTTP::Throwable;
 
-use Moose::Role;
-use MooseX::StrictConstructor;
-use MooseX::Role::WithOverloading 0.09;
-
 use Types::Standard qw(Int Str ArrayRef);
+
+use Moo::Role;
 
 use overload
     '&{}' => 'to_app',
@@ -90,7 +88,7 @@ sub is_server_error {
     return $status >= 500 && $status < 600;
 }
 
-no Moose::Role; 1;
+1;
 
 __END__
 

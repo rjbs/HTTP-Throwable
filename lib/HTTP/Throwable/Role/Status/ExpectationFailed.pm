@@ -1,6 +1,6 @@
 package HTTP::Throwable::Role::Status::ExpectationFailed;
 
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +10,7 @@ with(
 sub default_status_code { 417 }
 sub default_reason      { 'Expectation Failed' }
 
-no Moose::Role; 1;
+1;
 
 __END__
 
