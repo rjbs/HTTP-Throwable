@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::NoBody;
+
 use Moo::Role;
 
 sub body { return }

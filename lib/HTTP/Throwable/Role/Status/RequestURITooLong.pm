@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::RequestURITooLong;
+
 use Moo::Role;
 
 with(

@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::PreconditionFailed;
+
 use Moo::Role;
 
 with(

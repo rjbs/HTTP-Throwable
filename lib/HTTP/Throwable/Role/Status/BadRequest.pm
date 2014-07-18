@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::BadRequest;
+
 use Moo::Role;
 
 with(

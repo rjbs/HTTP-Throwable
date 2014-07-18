@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable;
+
 use Types::Standard qw(Str);
 
 use Moo::Role;

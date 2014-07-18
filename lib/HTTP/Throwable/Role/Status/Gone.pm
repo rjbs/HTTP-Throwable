@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::Gone;
+
 use Moo::Role;
 
 with(

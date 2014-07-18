@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::TextBody;
+
 use Moo::Role;
 
 sub body { $_[0]->text_body }

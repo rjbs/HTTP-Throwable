@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::MovedPermanently;
+
 use Moo::Role;
 
 with(

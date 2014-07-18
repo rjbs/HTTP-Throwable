@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::NotAcceptable;
+
 use Moo::Role;
 
 with(

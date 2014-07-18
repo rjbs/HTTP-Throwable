@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::ImATeapot;
+
 use Types::Standard qw(Bool);
 
 use Moo::Role;

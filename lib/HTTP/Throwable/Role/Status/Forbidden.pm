@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::Forbidden;
+
 use Moo::Role;
 
 with(

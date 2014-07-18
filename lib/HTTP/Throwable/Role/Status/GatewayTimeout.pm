@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::GatewayTimeout;
+
 use Moo::Role;
 
 with(

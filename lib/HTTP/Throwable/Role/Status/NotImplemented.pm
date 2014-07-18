@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::NotImplemented;
+
 use Moo::Role;
 
 with(

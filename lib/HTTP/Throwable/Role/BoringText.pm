@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::BoringText;
+
 use Moo::Role;
 
 sub text_body { $_[0]->status_line }

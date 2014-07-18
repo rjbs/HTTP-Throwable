@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::Unauthorized;
+
 use Types::Standard qw(Str ArrayRef);
 
 use Moo::Role;

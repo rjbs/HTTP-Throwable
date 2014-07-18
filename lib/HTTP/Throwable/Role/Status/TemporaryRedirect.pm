@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::TemporaryRedirect;
+
 use Moo::Role;
 
 with(

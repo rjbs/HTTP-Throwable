@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::BadGateway;
+
 use Moo::Role;
 
 with(
