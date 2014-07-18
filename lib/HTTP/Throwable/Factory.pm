@@ -1,6 +1,8 @@
 package HTTP::Throwable::Factory;
 use Moose;
 
+use HTTP::Throwable::Variant;
+
 use Sub::Exporter::Util ();
 use Sub::Exporter -setup => {
   exports => [
@@ -67,20 +69,16 @@ sub class_for {
 
     Module::Runtime::use_module($_) for @roles;
 
-    my $class = Moose::Meta::Class->create_anon_class(
+    my $class = HTTP::Throwable::Variant->build_variant(
         superclasses => [ $self->base_class ],
         roles        => [
           $self->core_roles,
           $self->extra_roles,
           @roles
         ],
-        cache        => 1,
     );
 
-    require MooseX::StrictConstructor;
-    MooseX::StrictConstructor->import({ into => $class->name });
-
-    return $class->name;
+    return $class;
 }
 
 1;
