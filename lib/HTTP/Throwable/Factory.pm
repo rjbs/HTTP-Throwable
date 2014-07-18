@@ -1,5 +1,8 @@
 package HTTP::Throwable::Factory;
 
+use strict;
+use warnings;
+
 use HTTP::Throwable::Variant;
 
 use Sub::Exporter::Util ();
@@ -10,9 +13,6 @@ use Sub::Exporter -setup => {
   ],
 };
 use Module::Runtime;
-
-use Moo;
-use namespace::clean;
 
 
 sub throw {
