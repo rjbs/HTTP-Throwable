@@ -1,5 +1,6 @@
 package HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable;
 use Moose::Role;
+use Types::Standard qw(Str);
 
 with(
     'HTTP::Throwable',
@@ -9,7 +10,7 @@ with(
 sub default_status_code { 416 }
 sub default_reason      { 'Requested Range Not Satisfiable' }
 
-has 'content_range' => ( is => 'ro', isa => 'Str' );
+has 'content_range' => ( is => 'ro', isa => Str );
 
 around 'build_headers' => sub {
     my $next    = shift;
