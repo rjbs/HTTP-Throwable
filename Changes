@@ -1,6 +1,7 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+        - added a role for response 308, from RFC 7238
 
 0.018     2013-11-19 19:54:21 America/New_York
         - removed use of deprecated enum syntax
