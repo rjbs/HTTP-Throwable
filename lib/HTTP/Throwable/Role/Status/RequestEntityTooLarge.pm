@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::RequestEntityTooLarge;
+
 use Moose::Role;
 
 with(

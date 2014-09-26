@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::MultipleChoices;
+
 use Moose::Role;
 
 with(

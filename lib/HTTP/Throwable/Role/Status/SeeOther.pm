@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::SeeOther;
+
 use Moose::Role;
 
 with(

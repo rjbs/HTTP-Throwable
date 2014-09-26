@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::UnsupportedMediaType;
+
 use Moose::Role;
 
 with(

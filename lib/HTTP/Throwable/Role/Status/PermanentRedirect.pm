@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::PermanentRedirect;
+
 use Moose::Role;
 
 with(

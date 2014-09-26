@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::Found;
+
 use Moose::Role;
 
 with(

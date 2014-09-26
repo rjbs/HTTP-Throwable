@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::Unauthorized;
+
 use Moose::Role;
 
 with(

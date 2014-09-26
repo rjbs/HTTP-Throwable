@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::UseProxy;
+
 use Moose::Role;
 
 with(

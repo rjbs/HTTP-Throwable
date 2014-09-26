@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::ImATeapot;
+
 use Moose::Role;
 
 with(

@@ -1,4 +1,5 @@
 package HTTP::Throwable;
+
 use Moose::Role;
 use MooseX::StrictConstructor;
 use MooseX::Role::WithOverloading 0.09;

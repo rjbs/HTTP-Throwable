@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Generic;
+
 use Moose::Role;
 
 with 'HTTP::Throwable';

@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::ExpectationFailed;
+
 use Moose::Role;
 
 with(

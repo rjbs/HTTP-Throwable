@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::NotModified;
+
 use Moose::Role;
 
 use Plack::Util ();

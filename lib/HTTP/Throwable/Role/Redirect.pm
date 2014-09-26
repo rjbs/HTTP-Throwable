@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Redirect;
+
 use Moose::Role;
 
 has 'location' => (

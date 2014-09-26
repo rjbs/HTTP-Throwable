@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::HTTPVersionNotSupported;
+
 use Moose::Role;
 
 with(

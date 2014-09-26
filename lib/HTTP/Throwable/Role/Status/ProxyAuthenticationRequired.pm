@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::ProxyAuthenticationRequired;
+
 use Moose::Role;
 
 with(

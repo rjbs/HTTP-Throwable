@@ -1,4 +1,5 @@
 package HTTP::Throwable::Factory;
+
 use Moose;
 
 use Sub::Exporter::Util ();

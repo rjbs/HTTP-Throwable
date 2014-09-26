@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::InternalServerError;
+
 use Moose::Role;
 
 with(

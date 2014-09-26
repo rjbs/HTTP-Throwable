@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::Conflict;
+
 use Moose::Role;
 
 with(

@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::NoBody;
+
 use Moose::Role;
 
 sub body { return }

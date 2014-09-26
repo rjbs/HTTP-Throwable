@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::MethodNotAllowed;
+
 use Moose::Role;
 use Moose::Util::TypeConstraints;
 

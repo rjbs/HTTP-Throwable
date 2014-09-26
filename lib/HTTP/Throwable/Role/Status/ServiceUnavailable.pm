@@ -1,4 +1,5 @@
 package HTTP::Throwable::Role::Status::ServiceUnavailable;
+
 use Moose::Role;
 
 with(
