@@ -6,7 +6,6 @@ use Plack::Util ();
 
 with(
     'HTTP::Throwable',
-    'HTTP::Throwable::Role::Redirect',
     'HTTP::Throwable::Role::BoringText',
 );
 

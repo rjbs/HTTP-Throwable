@@ -46,7 +46,6 @@ ht_test(SeeOther => { location => '/test' }, {
 
 ht_test(
     NotModified => {
-        location => '/test',
         additional_headers => [
             'Expires' => 'Soonish',
         ],
@@ -58,7 +57,6 @@ ht_test(
         body      => undef,
         length    => 0,
         headers   => [
-            Location => '/test',
             Expires  => 'Soonish',
         ],
     },

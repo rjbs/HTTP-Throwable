@@ -1,6 +1,7 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+        - a 304 does not require a Location header!
 
 0.019     2014-09-25 22:33:49-04:00 America/New_York
         - added a role for response 308, from RFC 7238
