@@ -11,7 +11,7 @@ with(
 sub default_status_code { 302 }
 sub default_reason      { 'Found' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

@@ -10,7 +10,7 @@ with(
 sub default_status_code { 406 }
 sub default_reason      { 'Not Acceptable' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

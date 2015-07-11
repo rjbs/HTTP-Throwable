@@ -32,7 +32,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-1;
+no Moo::Role; 1;
 
 __END__
 

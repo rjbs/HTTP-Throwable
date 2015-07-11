@@ -4,7 +4,7 @@ use Moo::Role;
 
 sub text_body { $_[0]->status_line }
 
-1;
+no Moo::Role; 1;
 
 __END__
 # ABSTRACT: provide the simplest text_body method possible

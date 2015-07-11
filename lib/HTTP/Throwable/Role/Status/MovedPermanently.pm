@@ -11,7 +11,7 @@ with(
 sub default_status_code { 301 }
 sub default_reason      { 'Moved Permanently' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

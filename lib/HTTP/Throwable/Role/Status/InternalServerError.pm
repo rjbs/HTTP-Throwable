@@ -24,7 +24,7 @@ sub text_body {
     return $out;
 }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

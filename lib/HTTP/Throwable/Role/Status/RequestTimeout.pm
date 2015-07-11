@@ -10,7 +10,7 @@ with(
 sub default_status_code { 408 }
 sub default_reason      { 'Request Timeout' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

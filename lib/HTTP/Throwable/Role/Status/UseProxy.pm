@@ -11,7 +11,7 @@ with(
 sub default_status_code { 305 }
 sub default_reason      { 'Use Proxy' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

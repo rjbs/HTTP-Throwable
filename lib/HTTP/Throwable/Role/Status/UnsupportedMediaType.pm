@@ -10,7 +10,7 @@ with(
 sub default_status_code { 415 }
 sub default_reason      { 'Unsupported Media Type' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

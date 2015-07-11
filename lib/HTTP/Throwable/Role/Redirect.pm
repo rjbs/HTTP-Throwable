@@ -19,7 +19,7 @@ around 'build_headers' => sub {
     return $headers;
 };
 
-1;
+no Moo::Role; 1;
 
 __END__
 # ABSTRACT: an exception that is a redirect

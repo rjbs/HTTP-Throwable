@@ -11,7 +11,7 @@ with(
 sub default_status_code { 307 }
 sub default_reason      { 'Temporary Redirect' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

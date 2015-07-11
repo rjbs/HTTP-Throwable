@@ -41,7 +41,7 @@ around 'build_headers' => sub {
 };
 
 
-1;
+no Moo::Role; 1;
 __END__
 
 # ABSTRACT: 405 Method Not Allowed

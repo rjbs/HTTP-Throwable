@@ -10,7 +10,7 @@ with(
 sub default_status_code { 404 }
 sub default_reason      { 'Not Found' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

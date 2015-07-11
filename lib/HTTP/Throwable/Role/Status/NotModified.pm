@@ -26,7 +26,7 @@ around 'as_psgi' => sub {
     $psgi;
 };
 
-1;
+no Moo::Role; 1;
 
 __END__
 

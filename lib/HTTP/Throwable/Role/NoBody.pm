@@ -14,7 +14,7 @@ sub body_headers {
 
 sub as_string { $_[0]->status_line }
 
-1;
+no Moo::Role; 1;
 
 __END__
 # ABSTRACT: an exception with no body

@@ -10,7 +10,7 @@ with(
 sub default_status_code { 414 }
 sub default_reason      { 'Request-URI Too Long' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

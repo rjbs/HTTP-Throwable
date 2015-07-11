@@ -88,7 +88,7 @@ sub is_server_error {
     return $status >= 500 && $status < 600;
 }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

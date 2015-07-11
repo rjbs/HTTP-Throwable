@@ -11,7 +11,7 @@ sub default_status_code { 400 }
 
 sub default_reason { 'Bad Request' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 

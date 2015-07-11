@@ -10,7 +10,7 @@ with(
 sub default_status_code { 501 }
 sub default_reason      { 'Not Implemented' }
 
-1;
+no Moo::Role; 1;
 
 __END__
 
