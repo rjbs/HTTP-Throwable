@@ -1,6 +1,6 @@
 package HTTP::Throwable::Role::Status::RequestURITooLong;
 
-use Moose::Role;
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +10,7 @@ with(
 sub default_status_code { 414 }
 sub default_reason      { 'Request-URI Too Long' }
 
-no Moose::Role; 1;
+no Moo::Role; 1;
 
 __END__
 

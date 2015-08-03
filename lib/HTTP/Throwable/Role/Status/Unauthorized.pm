@@ -1,6 +1,8 @@
 package HTTP::Throwable::Role::Status::Unauthorized;
 
-use Moose::Role;
+use Types::Standard qw(Str ArrayRef);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -12,7 +14,7 @@ sub default_reason      { 'Unauthorized' }
 
 has 'www_authenticate' => (
     is       => 'ro',
-    isa      => 'Str | ArrayRef[ Str ]',
+    isa      => Str | ArrayRef[Str],
     required => 1,
 );
 
@@ -30,7 +32,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose::Role; 1;
+no Moo::Role; 1;
 
 __END__
 

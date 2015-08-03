@@ -1,10 +1,12 @@
 package HTTP::Throwable::Role::Redirect;
 
-use Moose::Role;
+use Types::Standard qw(Str);
+
+use Moo::Role;
 
 has 'location' => (
     is       => 'ro',
-    isa      => 'Str',
+    isa      => Str,
     required => 1,
 );
 
@@ -17,7 +19,7 @@ around 'build_headers' => sub {
     return $headers;
 };
 
-no Moose::Role; 1;
+no Moo::Role; 1;
 
 __END__
 # ABSTRACT: an exception that is a redirect

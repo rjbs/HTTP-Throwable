@@ -1,6 +1,8 @@
 package HTTP::Throwable::Role::Generic;
 
-use Moose::Role;
+use Carp qw(confess);
+
+use Moo::Role;
 
 with 'HTTP::Throwable';
 
@@ -12,7 +14,7 @@ sub default_reason {
     confess "generic HTTP::Throwable must be given reason in constructor";
 }
 
-no Moose::Role; 1;
+no Moo::Role; 1;
 
 __END__
 

@@ -1,6 +1,8 @@
 package HTTP::Throwable::Role::Status::ServiceUnavailable;
 
-use Moose::Role;
+use Types::Standard qw(Str);
+
+use Moo::Role;
 
 with(
     'HTTP::Throwable',
@@ -10,7 +12,7 @@ with(
 sub default_status_code { 503 }
 sub default_reason      { 'Service Unavailable' }
 
-has 'retry_after' => ( is => 'ro', isa => 'Str' );
+has 'retry_after' => ( is => 'ro', isa => Str );
 
 around 'build_headers' => sub {
     my $next    = shift;
@@ -22,7 +24,7 @@ around 'build_headers' => sub {
     $headers;
 };
 
-no Moose::Role; 1;
+no Moo::Role; 1;
 
 __END__
 

@@ -6,7 +6,6 @@ use HTTP::Throwable::Factory;
 use Scalar::Util qw(reftype);
 use Test::Deep qw(cmp_deeply bag);
 use Test::Fatal;
-use Test::Moose;
 use Test::More;
 
 use Sub::Exporter -setup => {
@@ -52,8 +51,8 @@ sub ht_test {
                     $factory_class->throw($identifier, $arg);
                 };
 
-                does_ok($err, 'HTTP::Throwable');
-                does_ok($err, 'Throwable');
+                ok( $err->does('HTTP::Throwable') );
+                ok( $err->does('Throwable') );
 
                 if (my $code = $extra->{code}) {
                     is($err->status_code, $code, "got expected status code");
