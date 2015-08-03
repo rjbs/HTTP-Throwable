@@ -1,6 +1,8 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+
+0.022     2015-08-02 21:50:02-04:00 America/New_York
         - non-trial release of v0.021; now uses Moo instead of Moose
 
 0.021     2015-07-11 18:45:56-04:00 America/New_York (TRIAL RELEASE)
