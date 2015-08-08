@@ -1,6 +1,8 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+
+0.023     2015-08-08 09:08:51-04:00 America/New_York
         - fix one last bit of Moose that snuck through
 
 0.022     2015-08-02 21:50:02-04:00 America/New_York
