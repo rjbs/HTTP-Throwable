@@ -3,7 +3,7 @@ package HTTP::Throwable::Variant;
 use strict;
 use warnings;
 
-use Package::Variant
+use Package::Variant 1.002000
   importing => ['Moo', 'MooX::StrictConstructor'],
   subs      => [ qw(extends with) ];
 

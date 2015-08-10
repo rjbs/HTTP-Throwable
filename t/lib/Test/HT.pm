@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 use HTTP::Throwable::Factory;
-use Scalar::Util qw(reftype);
+use Scalar::Util qw(blessed reftype);
 use Test::Deep qw(cmp_deeply bag);
 use Test::Fatal;
 use Test::More;
@@ -51,8 +51,15 @@ sub ht_test {
                     $factory_class->throw($identifier, $arg);
                 };
 
-                ok( $err->does('HTTP::Throwable') );
-                ok( $err->does('Throwable') );
+                if (ok( blessed($err), "thrown exception is an object")) {
+                  ok( $err->does('HTTP::Throwable') );
+                  ok( $err->does('Throwable') );
+                } else {
+                  diag "want: a blessed exception object";
+                  diag "have: $err";
+
+                  die "further testing would be useless";
+                }
 
                 if (my $code = $extra->{code}) {
                     is($err->status_code, $code, "got expected status code");
