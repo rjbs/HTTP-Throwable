@@ -194,7 +194,7 @@ as adding the L<StackTrace::Auto> role to your exceptions.
 
 This is the status code integer as specified in the HTTP spec.
 
-=attr resason
+=attr reason
 
 This is the reason phrase as specified in the HTTP spec.
 
