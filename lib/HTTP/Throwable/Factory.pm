@@ -211,6 +211,8 @@ This is the method you're most likely to override in a subclass.
 
 =head2 roles_for_ident
 
+=head2 roles_for_status_code
+
 =head2 roles_for_no_ident
 
 This methods convert the exception type identifier to a role to apply.  For
@@ -219,6 +221,7 @@ example, if you call:
   Factory->throw(NotFound => { ... })
 
 ...then C<roles_for_ident> is called with "NotFound" as its argument.
+C<roles_for_status_code> is used if the string is three ASCII digits.
 
 If C<throw> is called I<without> a type identifier, C<roles_for_no_ident> is
 called.
