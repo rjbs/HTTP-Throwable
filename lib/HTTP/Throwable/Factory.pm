@@ -46,6 +46,12 @@ sub extra_roles {
 sub roles_for_ident {
     my ($self, $ident) = @_;
 
+    Carp::confess("roles_for_ident called with undefined ident")
+      unless defined $ident;
+
+    Carp::confess("roles_for_ident called with empty ident string")
+      unless length $ident;
+
     return "HTTP::Throwable::Role::Status::$ident";
 }
 
