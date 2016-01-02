@@ -123,7 +123,7 @@ my %lookup = (
     505 => 'HTTPVersionNotSupported',
 );
 
-sub rules_for_status_code {
+sub roles_for_status_code {
     my ($self, $code) = @_;
 
     my $ident = $lookup{$code};
