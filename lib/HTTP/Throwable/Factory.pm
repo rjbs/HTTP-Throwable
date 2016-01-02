@@ -65,7 +65,11 @@ sub class_for {
 
     my @roles;
     if (defined $ident) {
-        @roles = $self->roles_for_ident($ident);
+        if ($ident =~ /\A[0-9]{3}\z/) {
+          @roles = $self->roles_for_status_code($ident);
+        } else {
+          @roles = $self->roles_for_ident($ident);
+        }
     } else {
         @roles = $self->roles_for_no_ident;
     }
@@ -119,10 +123,11 @@ my %lookup = (
     505 => 'HTTPVersionNotSupported',
 );
 
-sub ident_for_status_code {
+sub rules_for_status_code {
     my ($self, $code) = @_;
 
-    return $lookup{$code};
+    my $ident = $lookup{$code};
+    return $self->roles_for_ident($ident);
 }
 
 1;
