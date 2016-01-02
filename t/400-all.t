@@ -13,6 +13,11 @@ ht_test(BadRequest => {}, {
     reason => 'Bad Request',
 });
 
+ht_test(400 => {}, {
+    code   => 400,
+    reason => 'Bad Request',
+});
+
 ht_test(
     Unauthorized => { www_authenticate => 'Basic realm="realm"' },
     {

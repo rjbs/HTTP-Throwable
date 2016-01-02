@@ -44,6 +44,14 @@ ht_test(SeeOther => { location => '/test' }, {
     ],
 });
 
+ht_test(303 => { location => '/test' }, {
+    code    => 303,
+    reason  => 'See Other',
+    headers => [
+        Location => '/test',
+    ],
+});
+
 ht_test(
     NotModified => {
         additional_headers => [
