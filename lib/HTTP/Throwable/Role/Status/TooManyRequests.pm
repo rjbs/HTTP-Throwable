@@ -14,7 +14,7 @@ no Moo::Role; 1;
 
 __END__
 
-# ABSTRACT: 404 Not Found
+# ABSTRACT: 429 Too Many Requests
 
 =head1 DESCRIPTION
 
