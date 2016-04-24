@@ -2,7 +2,7 @@ package HTTP::Throwable::Role::Status::MethodNotAllowed;
 
 use Type::Utils qw(subtype as where enum);
 use Types::Standard qw(ArrayRef);
-use List::AllUtils qw[ uniq ];
+use List::Util 1.45 qw[ uniq ];
 
 use Moo::Role;
 
