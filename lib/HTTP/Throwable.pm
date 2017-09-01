@@ -185,7 +185,7 @@ better suits your needs, then by all means, use it.
 
 It should be noted that even though these are all exception objects,
 only the 500 Internal Server Error error actually includes the stack
-trace (albiet optionally). This is because more often then not you will
+trace (albeit optionally). This is because more often then not you will
 not actually care about the stack trace and therefore do not the extra
 overhead. If you do find you want a stack trace though, it is as simple
 as adding the L<StackTrace::Auto> role to your exceptions.
