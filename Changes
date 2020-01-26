@@ -1,6 +1,10 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+        - swap from AllUtils to Utils (thanks, Karen Etheridge)
+        - work without . in @INC (thanks, Karen Etheridge)
+        - fix a typo (thanks, Edward Betts)
+        - teach Factory about 418
 
 0.026     2016-01-07 23:03:30-05:00 America/New_York
         - fix documentation (abstract) on 429 / TooManyRequests
