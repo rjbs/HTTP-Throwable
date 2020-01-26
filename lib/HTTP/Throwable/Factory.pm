@@ -120,6 +120,7 @@ my %lookup = (
     415 => 'UnsupportedMediaType',
     416 => 'RequestedRangeNotSatisfiable',
     417 => 'ExpectationFailed',
+    418 => 'ImATeapot',
 
     500 => 'InternalServerError',
     501 => 'NotImplemented',
