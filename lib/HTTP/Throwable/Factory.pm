@@ -125,7 +125,7 @@ my %lookup = (
     500 => 'InternalServerError',
     501 => 'NotImplemented',
     502 => 'BadGateway',
-    503 => 'Status::ServiceUnavailable',
+    503 => 'ServiceUnavailable',
     504 => 'GatewayTimeout',
     505 => 'HTTPVersionNotSupported',
 );
