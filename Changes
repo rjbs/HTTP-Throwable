@@ -1,6 +1,8 @@
 Revision history for Perl extension HTTP::Throwable
 
 {{$NEXT}}
+
+0.028     2022-12-31 16:38:44-05:00 America/New_York
         - update packaging and metadata
         - minimum required Perl is now v5.12
 
